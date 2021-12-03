@@ -10,28 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
-<style>
-    p, h1, small{
-        text-align: center;
-    }
-    #title {
-      font-size: 72px;
-      background-image: linear-gradient(#fd00da, #19d7f8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position:relative;
-}
-
-#title:after {
-      background: none;
-      content: attr(data-text);
-      left: 0;
-      top: 0;
-      z-index: -1;
-      position: absolute;
-      text-shadow: 1px 1px 2px #000;
-}
-</style>
 <body>
     <div class="container">
         <div class="menu">
@@ -45,55 +23,63 @@
                 <li> <a href="signup.html" class="signup-btn"> <span> Sign Up </span> </a> </li>
             </ul>
         </div>
-        <div class="banner">
+        <div class="picks">
             <div class="app-txt2">
-                <h1 style="font-size: 300%; letter-spacing: 5px; margin-left: 8%;" id="title"> GID PICKS OF THE WEEK </h1>
-                    <p style="font-size: 90%; padding: 2%; width: 25%; margin-left: 39%;">
-                        Launched in 2020, Best New Music is our way of highlighting the finest music currently out that
-                        you might not have heard.
-                          </p>
-                        <div style="margin-left: 5%;">
+                <h1 id="title"> GID PICKS OF THE WEEK </h1>
+                        <p class="picks-info">
+                            Launched in 2020, Best New Music is our way of highlighting the finest music currently out that
+                            you might not have heard.
+                        </p>
+                        <div>
                         <div class="responsive">
-                            <p style="margin-bottom: 5%; font-size: 75%;"> BEST NEW ALBUM</p>
+                            <header class="picks-title"> BEST NEW ALBUM</header>
                               <div class="product_gallery" onmouseover="playAlbum();">
                                   <img src="img/album.jpg" alt="album">
                                   <div class="desc">
-                                      <p style="margin-bottom: 5%;"> Mozzy </p>
-                                      <p style="margin-bottom: 5%;"> Beyond Bulletproof </p>
-                                      <small> Hip Hop </small>
+                                    <ul>
+                                        <li> Mozzy </li>
+                                        <li> Beyond Bulletproof </li>
+                                        <li> <small> Hip Hop </small> </li>
+                                    </ul>
                                   </div>
                               </div>
                         </div>
                          <div class="responsive">
-                             <p style="margin-bottom: 5%; font-size: 75%;">  BEST NEW RELEASE </p>
+                             <header class="picks-title">  BEST NEW RELEASE </header>
                              <div class="product_gallery" onmouseover="playSong();">
                                     <img src="img/song.png" alt="song">
                               <div class="desc">
-                                      <p style="margin-bottom: 5%;"> Drett1 </p>
-                                      <p style="margin-bottom: 5%;"> Shine </p>
-                                      <small> Hip Hop </small>
+                                    <ul>
+                                        <li> Drett1 </li>
+                                        <li> Shine </li>
+                                        <li> <small> Hip Hop </small> </li>
+                                    </ul>
                                   </div>
                             </div>
                         </div>
                         <div class="responsive">
-                          <p style="margin-bottom: 5%; font-size: 75%;"> SLEEPER PICK OF THE WEEK </p>
+                          <header class="picks-title"> BIGGEST SLEEPER  </header>
                           <div class="product_gallery" onmouseover="playSleeper();">
                               <img src="img/sleeper.jpg" alt="sleeper">
                             <div class="desc">
-                                      <p style="margin-bottom: 5%;"> Rick Ross </p>
-                                      <p style="margin-bottom: 5%;"> Free Enterprise </p>
-                                      <small> Hip Hop </small>
+                                    <ul>
+                                        <li> Rick Ross </li>
+                                        <li>  Free Enterprise </li>
+                                        <li> <small> Hip Hop </small> </li>
+                                    </ul>
                                   </div>
                             </div>
                         </div>
                           <div class="responsive">
-                          <p style="margin-bottom: 5%; font-size: 75%;"> HIGHLIGHTED ARTIST OF THE WEEK </p>
+                          <header class="picks-title"> FEATURED ARTIST </header>
                           <div class="product_gallery" onmouseover="playArtist();">
-                              <img src="img/artist.jpg" alt="artist">
+                            <img src="img/artist.jpg" alt="artist">
                             <div class="desc">
-                                      <p style="margin-bottom: 5%;"> Saint Jhn </p>
-                                      <p style="margin-bottom: 5%;"> Featured Artist of The Week </p>
-                                      <small> Hip Hop </small>
+                                    <ul>
+                                        <li> Saint Jhn </li>
+                                        <li> Featured Artist of The Week</li>
+                                        <li> <small> Hip Hop </small> </li>
+                                    </ul>
                                   </div>
                             </div>
                         </div>
