@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title> GidAnthems- Home </title>
+    <link rel="stylesheet" href="reference.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="logo active">HOME </li>
+                <li> <a href="artist.html"> UP & COMING ARTISTS </a> </li>
+                <li> <a href="products.html"> BEST PRODUCTS </a> </li>
+                <li> <a href="music.html"> PICKS OF WEEK </a> </li>
+                <li><a href="blog.html">NEWS </a> </li>
+                <li> <a href="signup.html" class="signup-btn"> <span> Sign Up </span> </a> </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="app-txt">
+                <h1 style="margin-top: 10%;"> We Believe Music Sounds Better With You </h1>
+                <p>
+                    Now more than ever, music plays a pivotal role in our lives. With music we express our feelings
+                    and emotion. We display our art. Music may be an escape from the pain of life or the reason that
+                    you're alive in the first place. Whatever the reason is, we hoe that this site will become a
+                    platform for new music to be heard.
+                </p>
+                <div class="play-btn">
+                    <div class="back-btn-inner" onclick="previousSong();"> <i class="fa fa-backward" aria-hidden="true"></i> </div>
+                    <div class="play-btn-inner" onclick="clickToPlay();"> <i class="fa fa-play" aria-hidden="true"></i> </div>
+                    <div class="pause-btn-inner" onclick="clickToPause();"> <i class="fa fa-pause" aria-hidden="true"></i> </div>
+                    <div class="next-btn-inner" onclick="nextSong();"> <i class="fa fa-forward" aria-hidden="true"></i> </div>
+                    <audio id = "my_audio">
+                        <source src="/music/song1.mp3" type="audio/mp3">
+                    </audio>
+                    <small> <b> PICKS OF THE WEEK </b></small>
+                </div>
+            </div>
+            <div class="app-img">
+                <img src="img/music.png">
+            </div>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li> <i class="fa fa-share-alt"> </i> <p> SHARE TO</p></li>
+                <li onclick="window.location.href = 'blog.html';"> <i class="fa fa-rss" aria-hidden="true"></i> <p> RECENT NEWS </p></li>
+                <li onclick="window.location.href = 'products.html';"> <i class="fa fa-usd"></i> <p> ADVERTISEMENT</p></li>
+                <li onclick="window.location.href = 'music.html';"> <i class="fa fa-music"> </i> <p> NEW MUSIC </p></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+     <div id="aplayer"></div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            order: 'random',
+            audio: [{
+                 name: "Don't Cry",
+                 artist: 'Ade ft Trevor Jackson',
+                 url: 'music/song1.mp3'
+            },
+            {
+                 name: "Let Go",
+                 artist: 'Aaron May',
+                 url: 'music/song2.mp3'
+            },
+                {
+                 name: "Border",
+                 artist: 'Saint Jhn',
+                 url: 'music/song3.mp3'
+            },
+                {
+                 name: "Trill Love",
+                 artist: 'K Camp ft Wale',
+                 url: 'music/song4.mp3'
+            },
+                {
+                 name: "Give Her Some Money",
+                 artist: 'Maliibu  Miitch',
+                 url: 'music/song5.mp3'
+            },
+                {
+                 name: "Mask Off",
+                 artist: 'Lio & Marlon Ponce',
+                 url: 'music/song6.mp3'
+            },
+                {
+                 name: "So Lonely",
+                 artist: 'Mozzy',
+                 url: 'music/song7.mp3'
+            },
+                {
+                 name: "Shine",
+                 artist: 'DRETT1 ft Lio & K00l',
+                 url: 'music/song8.mp3'
+            },
+            ]
+        });
+        function clickToPlay(){
+            ap.play();
+        }
+        function clickToPause(){
+            ap.pause();
+        }
+        function nextSong(){
+            ap.skipForward();
+        }
+        function previousSong(){
+            ap.skipBack();
+        }
+    </script>
+</body>
+</html>

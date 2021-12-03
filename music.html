@@ -1,0 +1,162 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title> GidAnthems- Home </title>
+    <link rel="stylesheet" href="reference.css">
+    <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+<style>
+    p, h1, small{
+        text-align: center;
+    }
+    #title {
+      font-size: 72px;
+      background-image: linear-gradient(#fd00da, #19d7f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position:relative;
+}
+
+#title:after {
+      background: none;
+      content: attr(data-text);
+      left: 0;
+      top: 0;
+      z-index: -1;
+      position: absolute;
+      text-shadow: 1px 1px 2px #000;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li> <a href="index.html">  HOME </a> </li>
+                <li> <a href="artist.html"> UP & COMING ARTISTS </a> </li>
+                <li> <a href="products.html"> BEST PRODUCTS </a> </li>
+                <li class="active"> PICKS OF THE WEEK  </li>
+                <li><a href="blog.html">NEWS </a> </li>
+
+                <li> <a href="signup.html" class="signup-btn"> <span> Sign Up </span> </a> </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="app-txt2">
+                <h1 style="font-size: 300%; letter-spacing: 5px; margin-left: 8%;" id="title"> GID PICKS OF THE WEEK </h1>
+                    <p style="font-size: 90%; padding: 2%; width: 25%; margin-left: 39%;">
+                        Launched in 2020, Best New Music is our way of highlighting the finest music currently out that
+                        you might not have heard.
+                          </p>
+                        <div style="margin-left: 5%;">
+                        <div class="responsive">
+                            <p style="margin-bottom: 5%; font-size: 75%;"> BEST NEW ALBUM</p>
+                              <div class="product_gallery" onmouseover="playAlbum();">
+                                  <img src="img/album.jpg" alt="album">
+                                  <div class="desc">
+                                      <p style="margin-bottom: 5%;"> Mozzy </p>
+                                      <p style="margin-bottom: 5%;"> Beyond Bulletproof </p>
+                                      <small> Hip Hop </small>
+                                  </div>
+                              </div>
+                        </div>
+                         <div class="responsive">
+                             <p style="margin-bottom: 5%; font-size: 75%;">  BEST NEW RELEASE </p>
+                             <div class="product_gallery" onmouseover="playSong();">
+                                    <img src="img/song.png" alt="song">
+                              <div class="desc">
+                                      <p style="margin-bottom: 5%;"> Drett1 </p>
+                                      <p style="margin-bottom: 5%;"> Shine </p>
+                                      <small> Hip Hop </small>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="responsive">
+                          <p style="margin-bottom: 5%; font-size: 75%;"> SLEEPER PICK OF THE WEEK </p>
+                          <div class="product_gallery" onmouseover="playSleeper();">
+                              <img src="img/sleeper.jpg" alt="sleeper">
+                            <div class="desc">
+                                      <p style="margin-bottom: 5%;"> Rick Ross </p>
+                                      <p style="margin-bottom: 5%;"> Free Enterprise </p>
+                                      <small> Hip Hop </small>
+                                  </div>
+                            </div>
+                        </div>
+                          <div class="responsive">
+                          <p style="margin-bottom: 5%; font-size: 75%;"> HIGHLIGHTED ARTIST OF THE WEEK </p>
+                          <div class="product_gallery" onmouseover="playArtist();">
+                              <img src="img/artist.jpg" alt="artist">
+                            <div class="desc">
+                                      <p style="margin-bottom: 5%;"> Saint Jhn </p>
+                                      <p style="margin-bottom: 5%;"> Featured Artist of The Week </p>
+                                      <small> Hip Hop </small>
+                                  </div>
+                            </div>
+                        </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+         <div id="aplayer"></div>
+    </div>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+    <script>
+        const albumPlayer = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                 url: 'music/album_song.mp3'
+            }
+            ]
+        });
+        const songPlayer = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                 url: 'music/best_song.mp3'
+            }
+            ]
+        });
+        const sleeperPlayer = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                 url: 'music/sleeper.mp3'
+            }
+            ]
+        });
+        const artistPlayer = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: [{
+                 url: 'music/artists.mp3'
+            }
+            ]
+        });
+        function playAlbum(){
+            albumPlayer.play();
+        }
+         function playSong(){
+            songPlayer.play();
+        }
+           function playSleeper(){
+            sleeperPlayer.play();
+        }
+           function playArtist(){
+            artistPlayer.play();
+        }
+    </script>
+</body>
+</html>
