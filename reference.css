@@ -415,12 +415,12 @@ input:focus, textarea:focus {
 
 }
 .bgimg-1 {
-  background-image: url("https://images.unsplash.com/photo-1453090927415-5f45085b65c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80");
-  float: middle;
-  width: 90%;
-  margin: 0 auto;
+  background-image: url("img/product-hero.jpg");
   margin-top: -2%;
-  height: 60%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bgimg-2 {
@@ -431,21 +431,29 @@ input:focus, textarea:focus {
 
 .bgimg-3 {
   background-image: url("img/blog_img.png");
-  min-height: 90%;
   margin-top: -2%;
-  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
+  font-size: 8vmin;
   text-align: center;
-  color: #000;
+  margin: 2rem 3rem 0;
+  mix-blend-mode: overlay;
+  font-weight: 100;
+}
+.blog-hero-caption {
+  font-size: 5vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  color: #fff;
+  font-weight: 100;
 }
 
-.caption span.border {
+.blog-hero-caption span.border {
   background-color: none;
   color: #fff;
   padding: 18px;
@@ -609,11 +617,12 @@ figure.pic11 {
 }
 
 .desc {
-  padding: 15px;
-  height: 10%;
+  height: 3rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
   text-align: center;
 }
-.desc p{margin-top: 4%;}
 .responsive {
    padding: 2% 0 0 2%;
   float: left;
