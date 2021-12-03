@@ -174,14 +174,14 @@ small{
     letter-spacing: 3px;
 }
 .quick-links{
-    left: 5.5rem;
+    left: 4rem;
     bottom: 0;
     position: absolute;
     background: linear-gradient(to right, #db1bf6, #19d7f8);
 }
 .quick-links ul{
     display: inline-flex;
-    margin: 30px auto;
+    padding: 2rem;
     text-align: center;
 }
 .quick-links ul li{
