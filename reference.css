@@ -18,8 +18,8 @@ body{
     margin: 0 auto;
 }
 .menu {
-  height: 3rem;
-  padding: 2rem;
+  padding: 3rem;
+  height: 2rem;
 }
 .menu ul{
     display: inline-flex;
@@ -27,7 +27,7 @@ body{
 }
 .menu ul li{
     list-style: none;
-    margin: 0 20px;
+    margin: 0 1rem;
     cursor: pointer;
     letter-spacing: 2px;
 }
@@ -416,11 +416,9 @@ input:focus, textarea:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
-
 }
 .bgimg-1 {
   background-image: url("img/product-hero.jpg");
-  margin-top: -2%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -435,7 +433,6 @@ input:focus, textarea:focus {
 
 .bgimg-3 {
   background-image: url("img/blog_img.png");
-  margin-top: -2%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -520,15 +517,15 @@ h3 {
   clear: both;
 }
 
-div #background {
-    margin-top: -2%;
-  height: 95%;
+ #background {
+  height: 100vh;
   width: 100%;
-  background-image: url('img/bricks.png');
-  padding-top: 5%;
+  background-image: url('img/bricks.jpg');
+  display: flex;
+  justify-content: center;
 }
 
-div#gallery {
+#gallery {
   width: 800px;
   margin: auto;
 }
@@ -640,8 +637,8 @@ figure.pic11 {
 }
 .picks{
   width: 80%;
-  top: 10%;
-  left: 8%;
+  top: 15%;
+  left: 10%;
   text-align: center;
   position: absolute;
   color: #fff;
